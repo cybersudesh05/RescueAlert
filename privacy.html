@@ -37,27 +37,18 @@
         <p><strong>Medical Information:</strong> Any information you enter into the Medical ID section (blood group, allergies, medications, etc.) is stored locally on your device. This is used to display vital information to first responders in an emergency.</p>
 
         <p><strong>SMS and Phone Data:</strong> The app requires permissions to send SMS messages and make phone calls. These are used strictly for the purpose of alerting your emergency contacts and dialing emergency services at your request.</p>
+
+        <p><strong>Accessibility Service:</strong> RescueAlert uses Android's Accessibility Service API to detect SOS trigger events (such as hardware button presses) even when the app is in the background or the screen is locked. This service is used <strong>strictly</strong> for the purpose of triggering an emergency response. It does <strong>not</strong> read, collect, or transmit any on-screen content, personal data, or passwords.</p>
     </div>
 
     <div class="section">
-        <h2>2. Accessibility Service API</h2>
-        <p>RescueAlert uses the Accessibility Service API to provide a critical safety feature: the ability to trigger an SOS alert by rapidly pressing the volume buttons 5 times. This function is designed to work even when the app is in the background or the screen is locked.</p>
-        <p><strong>Use and Collection:</strong></p>
-        <ul>
-            <li>We use this service <strong>only</strong> to monitor hardware button press events (volume up/down).</li>
-            <li>We <strong>do not</strong> collect, store, or share any personal data through the Accessibility Service.</li>
-            <li>We <strong>do not</strong> read your screen content, track your interactions with other applications, or monitor any other user activity.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>3. Data Sharing</h2>
+        <h2>2. Data Sharing</h2>
         <p><strong>External Sharing:</strong> We do <strong>not</strong> sell, trade, or otherwise transfer your personal or sensitive data to outside parties. Your location and SOS message are shared <strong>only</strong> with the emergency contacts you have specifically designated and, where applicable, emergency services.</p>
         <p><strong>Anonymous Services:</strong> We use OpenStreetMap and the Overpass API to fetch nearby hospital data. These requests are anonymous and do not include your personal identity or persistent identifiers.</p>
     </div>
 
     <div class="section">
-        <h2>4. Data Retention and Deletion</h2>
+        <h2>3. Data Retention and Deletion</h2>
         <p><strong>Local Storage:</strong> All personal data, including contacts and medical information, is stored locally on your device. We do not maintain any of this data on our servers.</p>
         <div><strong>Data Deletion:</strong> You can delete all your data at any time by:
             <ul>
@@ -69,14 +60,14 @@
     </div>
 
     <div class="section">
-        <h2>5. Permissions</h2>
+        <h2>4. Permissions</h2>
         <p>RescueAlert requires several sensitive permissions to function:</p>
         <ul>
             <li><strong>Location (Background):</strong> To determine your position even when the screen is locked or the app is minimized.</li>
             <li><strong>SMS:</strong> To send alert messages to your contacts.</li>
             <li><strong>Contacts:</strong> To allow you to pick emergency recipients.</li>
             <li><strong>Phone:</strong> To allow auto-dialing of emergency services.</li>
-            <li><strong>Accessibility Service:</strong> To detect hardware button presses for SOS triggering.</li>
+            <li><strong>Accessibility Service:</strong> To detect SOS triggers via hardware buttons even when the screen is locked or the app is closed. This service does not read screen content.</li>
         </ul>
     </div>
 
